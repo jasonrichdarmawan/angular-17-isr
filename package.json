@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:poc": "node dist/poc/server/server.mjs",
+    "serve:ssr:poc": "node dist/poc/server/server.mjs --watch",
     "lint": "ng lint"
   },
   "private": true,

@@ -6,6 +6,9 @@ const routes: Routes = [
     path: '',
     pathMatch: 'full',
     loadComponent: () => import("./presentation/pages/date/date.page").then(p => p.DatePage),
+    data: {
+      revalidate: 5,
+    },
   }
 ];
 
