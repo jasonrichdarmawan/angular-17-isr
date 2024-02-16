@@ -1,0 +1,11 @@
+{
+  "hosting": [
+    {
+      "target": "poc",
+      "source": ".",
+      "frameworksBackend": {
+        "region": "asia-east1"
+      }
+    }
+  ]
+}

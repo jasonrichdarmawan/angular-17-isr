@@ -10,7 +10,7 @@ const DATE_BODY_COMPONENT_DATE = makeStateKey<string>("DATE_BODY_COMPONENT_DATE"
   styleUrl: './date-body.component.scss'
 })
 export class DateBodyComponent {
-  date: Date | null;
+  date: string | null;
 
   constructor(
     transferState: TransferState,
@@ -18,14 +18,17 @@ export class DateBodyComponent {
     this.date = this.initDate(transferState);
   }
 
-  initDate(transferState: TransferState): Date | null {
+  initDate(transferState: TransferState): string | null {
+    console.log("initData");
     if (transferState.hasKey(DATE_BODY_COMPONENT_DATE)) {
+      console.log("initData hasKey")
       const result = transferState.get(DATE_BODY_COMPONENT_DATE, null);
       if (!result) { return null; }
-      return new Date(result);
+      return new Date(result).toUTCString();
     }
-    const result = new Date();
-    transferState.set(DATE_BODY_COMPONENT_DATE, result.toISOString());
+    console.log("initDataSet");
+    const result = new Date().toUTCString();
+    transferState.set(DATE_BODY_COMPONENT_DATE, result);
     return result;
   }
 }

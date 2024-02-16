@@ -133,6 +133,23 @@
               "projects/poc/**/*.html"
             ]
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "poc:build:production",
+              "serveTarget": "poc:serve:production"
+            },
+            "development": {
+              "buildTarget": "poc:build:development",
+              "serveTarget": "poc:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     },

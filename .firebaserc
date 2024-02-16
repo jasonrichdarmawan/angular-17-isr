@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "topoint-org": {
+      "hosting": {
+        "poc": [
+          "poc-isr"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "topoint-org"
+  }
+}

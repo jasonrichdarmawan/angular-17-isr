@@ -1,3 +1,22 @@
+# Development
+
+```
+$ npx ng serve poc
+```
+
+# Test ISR
+
+```
+$ npx ng build poc -c=development --watch
+$ node dist/poc/server/server.mjs --watch
+```
+
+# Deploy
+
+```
+$ FIREBASE_FRAMEWORKS_BUILD_TARGET='poc:build:development' npx ng deploy poc
+```
+
 # Angular17Isr
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8.
