@@ -53,7 +53,7 @@
             ],
             "scripts": [],
             "server": "projects/poc/src/main.server.ts",
-            "prerender": true,
+            "prerender": false,
             "ssr": {
               "entry": "projects/poc/server.ts"
             }
